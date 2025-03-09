@@ -7,7 +7,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
 
-    <title>{{ $title ?? 'App Title' }}</title>
+    <title>{{ $title ?? 'Guest Title' }}</title>
 </head>
 
 <body>
