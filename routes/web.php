@@ -3,6 +3,8 @@
 use App\Http\Controllers\DashboardController;
 use App\Livewire\Auth\Login;
 use App\Livewire\Auth\Register;
+use App\Livewire\Logout;
+use App\Livewire\Profile;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
@@ -12,6 +14,8 @@ Route::get('/', function () {
 
 Route::get("login", Login::class)->name("login");
 Route::get("register", Register::class)->name("register");
-Volt::route("dashboard", "dashboards")->name("dashboard")->middleware("auth");
+Route::get("logout", Logout::class)->name("logout");
 
-Volt::route("profile", "profiles")->name("profile")->middleware("auth");
+Route::get("profile", Profile::class)->name("profile")->middleware("auth");
+
+Volt::route("/dashboard", "dashboards")->name("dashboard")->middleware("auth");

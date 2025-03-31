@@ -15,7 +15,9 @@
             @endguest
             @auth()
                 <li><a href="{{ route('profile') }}" wire:navigate>Profile</a></li>
-                <li><a href="{{ route('logout') }}" wire:navigate>Logout</a></li>
+                <li>
+                    <livewire:logout />
+                </li>
             @endauth
         </div>
     </ul>
