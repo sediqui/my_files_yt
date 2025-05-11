@@ -2,8 +2,9 @@
 
 use Livewire\Volt\Component;
 use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 
-new #[Layout('components.layouts.guest')] #[Title('Dashboard')] class extends Component {
+new #[Title('Dashboard'), Layout('components.layouts.guest')] class extends Component {
     public $name = 'dashboard';
 };
 
